@@ -25,29 +25,32 @@ const part2 = (rawInput: string) => {
   let sum: number = 0;
 
   for (const line of lines) {
-    let re = /(?=(\d|one|two|three|four|five|six|seven|eight|nine))/g;
-    const numbers = Array.from(line.matchAll(re), (x) => x[1]);
+    let rx = /(?=(\d|one|two|three|four|five|six|seven|eight|nine))/g;
+    const numbers = Array.from(line.matchAll(rx), (x) => x[1]);
 
-    const numberStrings = [
-      "one",
-      "two",
-      "three",
-      "four",
-      "five",
-      "six",
-      "seven",
-      "eight",
-      "nine",
-    ];
     const numbersClean = numbers.map((number) => {
-      let num = number;
-      for (const numberString of numberStrings) {
-        num = num.replace(
-          numberString,
-          (numberStrings.indexOf(numberString) + 1).toString(),
-        );
+      switch (number) {
+        case "one":
+          return "1";
+        case "two":
+          return "2";
+        case "three":
+          return "3";
+        case "four":
+          return "4";
+        case "five":
+          return "5";
+        case "six":
+          return "6";
+        case "seven":
+          return "7";
+        case "eight":
+          return "8";
+        case "nine":
+          return "9";
+        default:
+          return number;
       }
-      return num;
     });
 
     const firstNumber = numbersClean[0];
@@ -62,36 +65,32 @@ run({
   part1: {
     tests: [
       {
-        input: `1abc2
-        pqr3stu8vwx
-      a1b2c3d49e5f
-      treb7uchet`,
+        input: `
+          1abc2
+          pqr3stu8vwx
+          a1b2c3d49e5f
+          treb7uchet
+        `,
         expected: 142,
       },
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
     ],
     solution: part1,
   },
   part2: {
     tests: [
       {
-        input: `two1nine
-        eightwothree
-        abcone2threexyz
-        xtwone3four
-        4nineeightseven2
-        zoneight234
-        7pqrstsixteen
-        sevenine`,
+        input: `
+          two1nine
+          eightwothree
+          abcone2threexyz
+          xtwone3four
+          4nineeightseven2
+          zoneight234
+          7pqrstsixteen
+          sevenine
+        `,
         expected: 360,
       },
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
     ],
     solution: part2,
   },
