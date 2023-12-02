@@ -1,4 +1,5 @@
 import run from "aocrunner";
+import { splitLines } from "../utils/index.js";
 
 const parseInput = (rawInput: string) => rawInput;
 
@@ -20,7 +21,7 @@ const part1 = (rawInput: string) => {
 
 const part2 = (rawInput: string) => {
   const input = parseInput(rawInput);
-  var lines = input.split(/\r?\n/);
+  var lines = splitLines(input);
 
   let sum: number = 0;
 
