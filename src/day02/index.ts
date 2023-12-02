@@ -3,20 +3,14 @@ import { splitLines } from "../utils/index.js";
 
 const parseInput = (rawInput: string) => rawInput;
 
-interface Bag {
-  red: number;
-  green: number;
-  blue: number;
-}
-
-const bag: Bag = { red: 12, green: 13, blue: 14 };
+const bag: CubeSet = { red: 12, green: 13, blue: 14 };
 
 interface Game {
   id: number;
-  draws: Draw[];
+  draws: CubeSet[];
 }
 
-interface Draw {
+interface CubeSet {
   red: number;
   green: number;
   blue: number;
@@ -54,7 +48,7 @@ const part2 = (rawInput: string) => {
 
   let sum = 0;
   for (const game of games) {
-    const max: Bag = { red: 0, green: 0, blue: 0 };
+    const max: CubeSet = { red: 0, green: 0, blue: 0 };
     for (const draw of game.draws) {
       if (draw.red > max.red) max.red = draw.red;
       if (draw.green > max.green) max.green = draw.green;
@@ -81,10 +75,10 @@ function parseGames(lines: string[]): Game[] {
   return games;
 }
 
-function parseDraws(drawsStrings: string[]): Draw[] {
-  const draws: Draw[] = [];
+function parseDraws(drawsStrings: string[]): CubeSet[] {
+  const draws: CubeSet[] = [];
   for (const drawString of drawsStrings) {
-    const draw: Draw = { blue: 0, green: 0, red: 0 };
+    const draw: CubeSet = { blue: 0, green: 0, red: 0 };
 
     const cubeStrings = drawString.split(", ");
     for (const cubeString of cubeStrings) {
