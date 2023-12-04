@@ -39,7 +39,23 @@ const part1 = (rawInput: string) => {
 const part2 = (rawInput: string) => {
   const input = parseInput(rawInput);
 
-  return;
+  const lines = splitLines(input);
+
+  let sum = 0;
+
+  const symbols = getSymbols(lines);
+  const numbers = getNumbers(lines);
+
+  symbols.forEach((symbol) => {
+    if (symbol.symbol === "*") {
+      const adNums = getAdjecentNumbers(symbol, numbers);
+      if (adNums.length == 2) {
+        sum += parseInt(adNums[0].number) * parseInt(adNums[1].number);
+      }
+    }
+  });
+
+  return sum;
 };
 
 function getSymbols(lines: string[]) {
@@ -121,10 +137,21 @@ run({
   },
   part2: {
     tests: [
-      // {
-      //   input: ``,
-      //   expected: "",
-      // },
+      {
+        input: `
+        467..114..
+        ...*......
+        ..35..633.
+        ......#...
+        617*......
+        .....+.58.
+        ..592.....
+        ......755.
+        ...$.*....
+        .664.598..
+        `,
+        expected: 467835,
+      },
     ],
     solution: part2,
   },
