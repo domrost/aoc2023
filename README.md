@@ -34,6 +34,8 @@ This repository contains my solutions to the daily riddles of the [Advent of Cod
 ![Day 24](https://badgen.net/badge/24/%E2%98%86%E2%98%86/gray)
 ![Day 25](https://badgen.net/badge/25/%E2%98%86%E2%98%86/gray)
 
+Click a badge to go to the specific day.
+
 ---
 
 This README is based on the [aocrunner template](https://github.com/caderek/aocrunner) by cadrek.
