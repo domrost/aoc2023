@@ -1,4 +1,4 @@
-package day_07_part_1
+package day07_part1
 
 import (
 	"cmp"

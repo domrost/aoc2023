@@ -1,11 +1,11 @@
-package day_07
+package day07
 
 import (
 	"fmt"
 	"time"
 
-	"github.com/domrost/aoc2023/go/days/day_07_part_1"
-	"github.com/domrost/aoc2023/go/days/day_07_part_2"
+	"github.com/domrost/aoc2023/go/days/day07_part1"
+	"github.com/domrost/aoc2023/go/days/day07_part2"
 )
 
 // Run function of the daily challenge
@@ -33,10 +33,10 @@ func Run(input []string, mode int) {
 }
 
 func Part1(input []string) string {
-	return day_07_part_1.Run(input)
+	return day07_part1.Run(input)
 }
 
 // Part2 solves the second part of the exercise
 func Part2(input []string) string {
-	return day_07_part_2.Run(input)
+	return day07_part2.Run(input)
 }

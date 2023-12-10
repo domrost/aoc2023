@@ -1,11 +1,8 @@
 package exec
 
 import (
-	"github.com/domrost/aoc2023/go/days/day_0"
-	"github.com/domrost/aoc2023/go/days/day_06"
-	"github.com/domrost/aoc2023/go/days/day_07"
-	"github.com/domrost/aoc2023/go/days/day_08"
-
+	"github.com/domrost/aoc2023/go/days/day0"
+	"github.com/domrost/aoc2023/go/days/day06"
 	"github.com/domrost/aoc2023/go/internal/load"
 )
 
@@ -13,10 +10,10 @@ import (
 func RunChallenge(day int, inputPath string, mode int) {
 	input := load.LoadInputLines(inputPath)
 	mapping := map[int]func([]string, int){
-		0: day_0.Run,
-		6: day_06.Run,
-		7: day_07.Run,
-		8: day_08.Run,
+		0: day0.Run,
+		6: day06.Run,
+		7: day07.Run,
+		8: day08.Run,
 	}
 
 	mapping[day](input, mode)

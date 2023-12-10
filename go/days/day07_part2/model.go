@@ -1,11 +1,12 @@
-package day_07_part_1
+package day07_part2
 
 import "errors"
 
 type card int
 
 const (
-	card2 card = iota
+	cardJ card = iota
+	card2
 	card3
 	card4
 	card5
@@ -14,7 +15,6 @@ const (
 	card8
 	card9
 	cardT
-	cardJ
 	cardQ
 	cardK
 	cardA
