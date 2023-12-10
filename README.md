@@ -15,7 +15,7 @@ This repository contains my solutions to the daily riddles of the [Advent of Cod
 [![Day 5](https://badgen.net/badge/05/%E2%98%85%E2%98%85/green)](ts/src/day05)
 [![Day 6](https://badgen.net/badge/06/%E2%98%85%E2%98%85/green)](go/days/day_06)
 [![Day 7](https://badgen.net/badge/07/%E2%98%85%E2%98%85/green)](go/days/day_07)
-![Day 8](https://badgen.net/badge/08/%E2%98%86%E2%98%86/gray)
+[![Day 8](https://badgen.net/badge/08/%E2%98%85%E2%98%85/green)](go/days/day_08)
 ![Day 9](https://badgen.net/badge/09/%E2%98%86%E2%98%86/gray)
 ![Day 10](https://badgen.net/badge/10/%E2%98%86%E2%98%86/gray)
 ![Day 11](https://badgen.net/badge/11/%E2%98%86%E2%98%86/gray)
