@@ -5,6 +5,7 @@ import (
 	"github.com/domrost/aoc2023/go/days/day06"
 	"github.com/domrost/aoc2023/go/days/day07"
 	"github.com/domrost/aoc2023/go/days/day08"
+	"github.com/domrost/aoc2023/go/days/day09"
 	"github.com/domrost/aoc2023/go/internal/load"
 )
 
@@ -16,6 +17,7 @@ func RunChallenge(day int, inputPath string, mode int) {
 		6: day06.Run,
 		7: day07.Run,
 		8: day08.Run,
+		9: day09.Run,
 	}
 
 	mapping[day](input, mode)
