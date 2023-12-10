@@ -3,6 +3,8 @@ package exec
 import (
 	"github.com/domrost/aoc2023/go/days/day0"
 	"github.com/domrost/aoc2023/go/days/day06"
+	"github.com/domrost/aoc2023/go/days/day07"
+	"github.com/domrost/aoc2023/go/days/day08"
 	"github.com/domrost/aoc2023/go/internal/load"
 )
 
